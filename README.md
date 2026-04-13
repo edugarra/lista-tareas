@@ -41,7 +41,7 @@ Aplicación full stack para gestionar tareas con una interfaz moderna, responsiv
 lista-tareas/
 ├── backend/
 └── frontend/
-
+```
 ⚙️ Instalación local
 
 1. Clonar repositorio
