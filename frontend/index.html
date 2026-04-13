@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <main class="app-container">
+    <section class="app-card">
+      <header class="app-header">
+        <h1>Lista de Tareas</h1>
+        <p>Organiza, filtra y controla tus tareas.</p>
+      </header>
+
+      <div id="mensaje"></div>
+
+      <section class="toolbar">
+        <div class="toolbar-busqueda">
+          <span class="icono">🔎</span>
+          <input type="text" id="buscador" placeholder="Buscar tareas...">
+        </div>
+
+        <div class="toolbar-filtros">
+          <select id="filtroEstado">
+            <option value="todas">Todas</option>
+            <option value="completadas">Completadas</option>
+            <option value="pendientes">Pendientes</option>
+          </select>
+
+          <select id="ordenarPor">
+            <option value="fecha_desc">Más recientes</option>
+            <option value="fecha_asc">Más antiguas</option>
+            <option value="estado">Por estado</option>
+          </select>
+        </div>
+      </section>
+
+      <div id="loading" style="display: none;">⏳ Cargando tareas...</div>
+
+      <section class="resumen-tareas" id="resumenTareas">
+        <div class="resumen-card">
+          <span class="resumen-label">Total</span>
+          <strong id="totalTareas">0</strong>
+        </div>
+
+        <div class="resumen-card pendiente">
+          <span class="resumen-label">Pendientes</span>
+          <strong id="tareasPendientes">0</strong>
+        </div>
+
+        <div class="resumen-card completada">
+          <span class="resumen-label">Completadas</span>
+          <strong id="tareasCompletadas">0</strong>
+        </div>
+      </section>
+
+      <ul id="listaTareas" class="task-list"></ul>
+
+
+      <div id="modalOverlay" class="modal-overlay oculto">
+        <div class="modal">
+          <h2>Confirmar eliminación</h2>
+          <p id="modalTexto">¿Seguro que quieres eliminar esta tarea?</p>
+
+          <div class="modal-actions">
+            <button type="button" id="btnModalCancelar">Cancelar</button>
+            <button type="button" id="btnModalEliminar">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modalCrearOverlay" class="modal-overlay oculto">
+        <div class="modal">
+          <h2>Nueva tarea</h2>
+
+          <input type="text" id="modalTitulo" placeholder="Título" />
+          <input type="text" id="modalDescripcion" placeholder="Descripción" />
+
+          <div class="modal-actions">
+            <button id="btnModalCrearCancelar">Cancelar</button>
+            <button id="btnModalCrearGuardar">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="btnFlotante" class="btn-flotante" aria-label="Nueva tarea">+</button>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
