@@ -39,8 +39,6 @@ export function handleCargarTareaParaEditar(tarea) {
   renderizarTareas();
 }
 
-export function resetFormulario() {}
-
 export function handleCancelarEdicion() {
   appState.tareaEditandoId = null;
   renderizarTareas();
@@ -136,7 +134,6 @@ export async function guardarNuevaTareaDesdeModal() {
 export async function handleCompletarTarea(id) {
   try {
     await toggleCompletarTareaApi(id);
-
     mostrarMensaje("🔄 Estado actualizado");
     await cargarTareas();
   } catch (error) {

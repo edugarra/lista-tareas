@@ -1,6 +1,5 @@
 import {
   cargarTareas,
-  handleCancelarEdicion,
   cerrarModalEliminar,
   confirmarEliminarTarea,
   abrirModalCrear,
@@ -37,7 +36,6 @@ modalOverlay.addEventListener("click", (e) => {
 });
 
 btnFlotante.addEventListener("click", abrirModalCrear);
-
 btnModalCrearCancelar.addEventListener("click", cerrarModalCrear);
 btnModalCrearGuardar.addEventListener("click", guardarNuevaTareaDesdeModal);
 
