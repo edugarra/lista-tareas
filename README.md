@@ -94,6 +94,12 @@ Integración con calendario
 
 Estas mejoras serán implementadas progresivamente en futuras versiones del proyecto.
 
+## Demo online
+
+- Frontend: https://lista-tareas-jet.vercel.app/
+- Backend: https://lista-tareas-backend-68pu.onrender.com
+- Repositorio: https://github.com/edugarra/lista-tareas
+
 👨‍💻 Autor
 
 Desarrollado por Luis Garrido
